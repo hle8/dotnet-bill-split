@@ -23,7 +23,11 @@ public class BillCalcTests
 
         var result = Library.BillTools.TipCalc(orders, 0.5f);
 
-        Assert.That(result, Is.Not.Null);
+        Assert.Multiple(() =>
+        {
+            Assert.That(result, Is.Not.Null);
+            Assert.That(orders, Has.Count.EqualTo(result!.Count));
+        });
     }
 
     [Test]
@@ -39,7 +43,11 @@ public class BillCalcTests
 
         var result = Library.BillTools.TipCalc(orders, 0.3f);
 
-        Assert.That(result, Is.Not.Null);
+        Assert.Multiple(() =>
+        {
+            Assert.That(result, Is.Not.Null);
+            Assert.That(orders, Has.Count.EqualTo(result!.Count));
+        });
     }
 
     [Test]
@@ -58,7 +66,11 @@ public class BillCalcTests
 
         var result = Library.BillTools.TipCalc(orders, 0.3f);
 
-        Assert.That(result, Is.Not.Null);
+        Assert.Multiple(() =>
+        {
+            Assert.That(result, Is.Not.Null);
+            Assert.That(orders, Has.Count.EqualTo(result!.Count));
+        });
     }
 
     [Test]
